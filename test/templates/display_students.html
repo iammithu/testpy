@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Students</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <ul>
+        {% for student in students %}
+            <li>
+                <a href="{{ url_for('display_student', student_id=student[0]) }}">
+                    {{ student[1] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

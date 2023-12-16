@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+</head>
+<body>
+    <h1>Student Admission Form</h1>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="father_name">Father's Name:</label>
+        <input type="text" name="father_name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" name="phone_number" required><br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="location" required><br>
+
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" name="date_of_birth" required><br>
+
+        <!-- You can add more fields as needed, including photo upload -->
+
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{{ url_for('display_students') }}">Display Students</a>
+</body>
+</html>
